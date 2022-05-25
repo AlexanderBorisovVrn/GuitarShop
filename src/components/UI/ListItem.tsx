@@ -3,13 +3,13 @@ import CSS from 'csstype';
 type Props= {
   children:ReactNode,
   alignItems?:'center' | 'flex-start',
-  styles?:CSS.Properties
+  sx?:CSS.Properties
 }
 
 
-export default function ListItem({children,alignItems='center',styles}:Props) {
+export default function ListItem({children,alignItems='center',sx}:Props) {
   const style:CSS.Properties={display:'flex',alignItems:alignItems,flexWrap:'wrap'}
-  const currentStyles = {style,...styles}
+  const currentStyles = {...style,...sx}
   
   return (
     <li  style={currentStyles}>{children}</li>

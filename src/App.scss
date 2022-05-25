@@ -52,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 ._Hover_Underline{
   &:hover{
     color: $primary_1;
-    border-bottom: 2px solid $primary_1;
+    border-bottom: 4px solid $primary_1;
+    transform:translateY(2px)
   }
 }

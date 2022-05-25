@@ -23,7 +23,7 @@ export default function NavTabs({}: Props) {
   const links = navLinks.map((link) => {
     return (
       <React.Fragment key={link.label}>
-        <ListItem alignItems="center" styles={{margin:'0 5px'}} >
+        <ListItem alignItems="center" sx={{margin:'0 5px'}} >
           <Link to={link.to} className={linkStyles}>
             {link.label}
           </Link>

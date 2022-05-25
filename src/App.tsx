@@ -1,8 +1,12 @@
 import AppRoutes from "./components/Router/AppRoutes";
-import './App.scss'
+import Header from "./components/Header/Header";
+import "./App.scss";
 
-export default function App(){
+export default function App() {
   return (
-    <AppRoutes/>
-  )
+    <>
+      <Header />
+      <AppRoutes />
+    </>
+  );
 }

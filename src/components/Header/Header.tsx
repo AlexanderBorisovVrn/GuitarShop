@@ -19,7 +19,7 @@ export default function Header({}: Props) {
           </Link>
         </div>
         <NavTabs />
-        <button type="button" className={Button}>
+        <button type="button" className={searchButtonStyles}>
             &#128269;
         </button>
       </div>
