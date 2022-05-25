@@ -1,9 +1,14 @@
 import { ReactNode } from "react";
+import CSS from 'csstype';
 
-export default function List({children}:{children:ReactNode}){
-  const direction = 'row'? 'row':'column'
+type ListDirection = 'row' | 'column' | undefined | 'row-reverse' | 'column-reverse'
+type Props = {children:ReactNode,direction?:ListDirection}
+
+export default function List({children,direction='row'}: Props) {
+const style:CSS.Properties={display:'flex',flexDirection:direction,flexWrap:'wrap',listStyle:'none'}
+
   return (
-    <ul style={{display:"flex",flexDirection:direction,flexWrap:'wrap',listStyle:'none'}}>
+    <ul style={style}>
       {children}
     </ul>
   )

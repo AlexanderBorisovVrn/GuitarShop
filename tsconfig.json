@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "webpack.config.js" ,"src/types/declaration.d.ts" ]
 }

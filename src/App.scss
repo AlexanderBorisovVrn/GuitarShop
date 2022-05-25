@@ -1,5 +1,57 @@
-*{
+@import './variables/breakpoints.scss';
+@import './variables/colors.scss';
+
+*,*:after, *:before{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+button{
+background-color: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display';
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.Container {
+  display: flex;
+  margin: 0 auto;
+  // background-color: rgba(0, 0, 223, 0.103);
+  padding: 0 10px;
+  height: 100%;
+  width: 100%;
+
+  @include md() {
+    padding: 0 15px;
+  }
+  @include lg() {
+    padding: 0 20px;
+  }
+  @include xl() {
+    padding: 0 25px;
+  }
+  @include xxl() {
+    padding: 0 30px;
+  }
+}
+
+
+._Hover_Underline{
+  &:hover{
+    color: $primary_1;
+    border-bottom: 2px solid $primary_1;
+  }
 }
