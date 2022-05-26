@@ -25,29 +25,57 @@
   width: 7rem;
   height: 100%;
   padding: 5px;
-  @include md(){
+  @include md() {
     width: 8rem;
   }
-  @include lg(){
+  @include lg() {
     width: 10rem;
   }
-  @include xl(){
+  @include xl() {
     width: 14rem;
   }
-  @include xxl(){
+  @include xxl() {
     width: 16rem;
   }
 }
-.Button{
+.Button_Group {
+  display: flex;
+}
+
+.Button {
   width: 4rem;
-  border: 1px solid $gray_2;
-  border-bottom: 0;
-  border-top: 0;
   color: $gray_2;
   font-size: larger;
   background-color: initial;
+  border: none;
 }
 
-.Header_Container_SpaceBetween{
+.Button_Border {
+  border: 1px solid $gray_2;
+  border-bottom: 0;
+  border-top: 0;
+}
+
+.Burger {
+  position: relative;
+  @include xl() {
+    display: none;
+  }
+  &::after {
+    content: "";
+    border: 1px solid $gray_1;
+    position: absolute;
+    right: 1.2rem;
+    left: 1.2rem;
+    box-shadow: 0 0.5rem 0 $gray_1, 0 -0.5rem 0 $gray_1;
+    @include lg() {
+      right: 1rem;
+      left: 1rem;
+      box-shadow: 0 0.75rem 0 $gray_1, 0 -0.75rem 0 $gray_1;
+    }
+  }
+}
+
+.Header_Container_SpaceBetween {
   justify-content: space-between;
 }

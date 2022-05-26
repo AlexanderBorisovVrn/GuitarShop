@@ -1,4 +1,6 @@
 @import "../../variables/colors.scss";
+@import "../../variables/breakpoints.scss";
+
 .Tab_Link {
   display: flex;
   width: 100%;
@@ -12,9 +14,12 @@
 }
 
 .List {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: none;
+  @include xl(){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .List_Item {
