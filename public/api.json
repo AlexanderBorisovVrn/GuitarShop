@@ -1,0 +1,77 @@
+[
+  {
+    "category": "electric-guitars",
+    "model": {
+      "name": "American Professional II Stratocaster",
+      "serial": "0113900755",
+      "color": "3-Color Sunburst",
+      "handside":"right",
+      "features": [
+        "Three V-Mod II single-coil Stratocaster pickups",
+        "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+        "Deep 'C'-shaped neck profile with rolled fingerboard edges"
+      ],
+      "description": [
+        "The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep “C” neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle.",
+        "The American Pro II Stratocaster delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "electric-guitars",
+    "model": {
+      "name": "AMERICAN PROFESSIONAL II STRATOCASTER HSS",
+      "serial": "0113912718",
+      "color": "Mystic Surf Green",
+      "features": [
+        "Two V-Mod II single-coil Stratocaster pickups",
+        "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+        "Double Tap™ Humbucking Bridge Pickup"
+      ],
+      "description": [
+        "The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep “C” neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle.",
+        "The American Pro II Stratocaster HSS delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "electric-guitars",
+    "model": {
+      "name": "AMERICAN PROFESSIONAL II STRATOCASTER HSS",
+      "serial": "0113912718",
+      "color": "Mystic Surf Green",
+      "handside":"right",
+      "features": [
+        "Two V-Mod II single-coil Stratocaster pickups",
+        "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+        "Double Tap™ Humbucking Bridge Pickup"
+      ],
+      "description": [
+        "The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep “C” neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle.",
+        "The American Pro II Stratocaster HSS delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "electric-guitars",
+    "model": {
+      "name": "AMERICAN PROFESSIONAL II STRATOCASTER",
+      "serial": "0113912718",
+      "color": "Miami Blue",
+      "handside":"left",
+      "features": [
+        "Two V-Mod II single-coil Stratocaster pickups",
+        "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+        "Double Tap™ Humbucking Bridge Pickup"
+      ],
+      "description": [
+        "The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep “C” neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle.",
+        "The American Pro II Stratocaster Left-Hand delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  }
+]

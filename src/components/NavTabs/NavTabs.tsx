@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-import List from "../UI/List";
-import ListItem from "../UI/ListItem";
 import styles from "./NavTabs.module.scss";
-const { TabLink } = styles;
+const { Tab_Link, List_Item,List } = styles;
 type Props = {};
 
 interface ILink {
@@ -18,19 +16,19 @@ const navLinks: ILink[] = [
 ];
 
 export default function NavTabs({}: Props) {
-  const linkStyles = [TabLink, '_Hover_Underline'].join(" ");
+  const linkStyles = [Tab_Link, "_Hover_Underline"].join(" ");
 
   const links = navLinks.map((link) => {
     return (
       <React.Fragment key={link.label}>
-        <ListItem alignItems="center" sx={{margin:'0 5px'}} >
+        <li className={List_Item}>
           <Link to={link.to} className={linkStyles}>
             {link.label}
           </Link>
-        </ListItem>
+        </li>
       </React.Fragment>
     );
   });
 
-  return <List>{links}</List>;
+  return <ul className={List}>{links}</ul>;
 }

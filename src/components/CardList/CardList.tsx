@@ -1,13 +1,11 @@
-import React from "react";
 import style from "./CardList.module.scss";
-import List from "../UI/List";
 import CardItem from "../CardItem/CardItem";
 import CSS from 'csstype'
-const { CardsList, Sort, Wrap } = style;
+const { Cards_List, Sort, Wrap } = style;
 type Props = {};
 
 export default function CardList({}: Props) {
-  const styles:CSS.Properties = {display:'grid',gridTemplateColumns:'1fr 1fr 1fr'}
+  const styles:CSS.Properties = {display:'grid',gridTemplateColumns:'repeat(3,1fr)'}
   return (
     <section className={Wrap}>
       <div className={Sort}>
@@ -19,7 +17,7 @@ export default function CardList({}: Props) {
         </select>
         
       </div>
-      <List sx={styles}>
+      <ul className={Cards_List}>
           <CardItem />
           <CardItem />
           <CardItem />
@@ -30,8 +28,7 @@ export default function CardList({}: Props) {
           <CardItem />
           <CardItem />
           <CardItem />
-          <CardItem />
-        </List>
+        </ul>
     </section>
   );
 }

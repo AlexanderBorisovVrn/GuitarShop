@@ -1,9 +1,33 @@
-.Aside{
-  flex:0 0 calc(30% - 30px);
-  padding:.5rem;
-  // background-color: rgba(255, 0, 0, 0.342);
- }
+@import "../../variables/breakpoints.scss";
+@import "../../variables/colors.scss";
+.Aside {
+  display: none;
+  
+  @include md() {
+    display: block;
+    padding: 0.3rem;
+  }
+  @include md() {
+    padding: 0.5rem;
+  }
+}
+.Aside >h1{
+  font-weight: 800;
+  font-family: sans-serif;
+}
 
- .Field_Set{
-   display: block;
- }
+.Field_Set {
+  padding: .5rem;
+  border: none;
+  margin-top: .5rem;
+}
+.Field_Set>legend{
+  text-transform: uppercase;
+  color: $gray_1;
+  font-size: 20px;
+  font-weight: 700;
+}
+.Field_Set>input{
+  margin: .5rem;
+  margin-left: 0;
+}
