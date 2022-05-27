@@ -1,11 +1,12 @@
 import style from "./CardList.module.scss";
 import CardItem from "../CardItem/CardItem";
-import CSS from 'csstype'
+import {observer}from "mobx-react-lite";
+import store from "../../store/RootStore";
 const { Cards_List, Sort, Wrap } = style;
 type Props = {};
 
-export default function CardList({}: Props) {
-  const styles:CSS.Properties = {display:'grid',gridTemplateColumns:'repeat(3,1fr)'}
+const CardList = observer(({}: Props) => {
+  store.fetchStore.fetchData();
   return (
     <section className={Wrap}>
       <div className={Sort}>
@@ -15,20 +16,21 @@ export default function CardList({}: Props) {
           <option value="priceDown">Снчала дорогие</option>
           <option value="popular">Популярные</option>
         </select>
-        
       </div>
       <ul className={Cards_List}>
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-          <CardItem />
-        </ul>
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+        <CardItem />
+      </ul>
     </section>
   );
-}
+});
+
+export default CardList;

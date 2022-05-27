@@ -2,6 +2,7 @@
   {
     "category": "electric-guitars",
     "model": {
+      "type":"stratocaster",
       "name": "American Professional II Stratocaster",
       "serial": "0113900755",
       "color": "3-Color Sunburst",
@@ -39,6 +40,7 @@
   {
     "category": "electric-guitars",
     "model": {
+      "type":"stratocaster",
       "name": "AMERICAN PROFESSIONAL II STRATOCASTER HSS",
       "serial": "0113912718",
       "color": "Mystic Surf Green",
@@ -58,6 +60,7 @@
   {
     "category": "electric-guitars",
     "model": {
+      "type":"stratocaster",
       "name": "AMERICAN PROFESSIONAL II STRATOCASTER",
       "serial": "0113912718",
       "color": "Miami Blue",
