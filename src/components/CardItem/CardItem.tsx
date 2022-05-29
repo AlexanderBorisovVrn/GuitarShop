@@ -1,17 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import style from "./CardItem.module.scss";
-const { Img, Title, Options,Item } = style;
-type Props = {};
+import { IProduct } from "../../types/types";
+type Props = {
+  item: IProduct;
+};
 
-export default function CardItem({}: Props) {
+const { Img, Title, Item,Options,Price } = style;
 
+export default function CardItem({ item }: Props) {
+  const { category, model } = item;
+  const { name, img, id,price } = model;
+  const link = `/${category}/${id}`;
+
+  const transformName = name.toLowerCase();
   return (
     <li className={Item}>
-      <Link to='/'>
-        <div className={Img}>image</div>
-        <h3 className={Title}>title</h3>
-        <div className={Options}>opt</div>
+      <Link to={link}>
+        <div className={Img}>
+          <img alt={name} src={img} />
+        </div>
+        <h4 className={Title}>{transformName}</h4>
+        <div className={Options}>
+          <div className={Price}><span>Price</span>: ${price}</div>
+        </div>
       </Link>
     </li>
   );

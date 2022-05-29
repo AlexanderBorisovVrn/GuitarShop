@@ -1,12 +1,18 @@
+import React, { FC } from "react";
 import style from "./CardList.module.scss";
+import { IProduct } from "../../types/types";
 import CardItem from "../CardItem/CardItem";
-import {observer}from "mobx-react-lite";
-import store from "../../store/RootStore";
-const { Cards_List, Sort, Wrap } = style;
-type Props = {};
 
-const CardList = observer(({}: Props) => {
-  store.fetchStore.fetchData();
+const { Cards_List, Sort, Wrap } = style;
+type Props = { data: IProduct[]; category?: string };
+
+const CardList = ({ data, category }: Props) => {
+  const categoryData =category? data.filter((item) => item.category === category):data;
+  
+  const dataView = categoryData.map((item, idx) => {
+    return <CardItem item={item} key={idx} />;
+  });
+
   return (
     <section className={Wrap}>
       <div className={Sort}>
@@ -17,20 +23,9 @@ const CardList = observer(({}: Props) => {
           <option value="popular">Популярные</option>
         </select>
       </div>
-      <ul className={Cards_List}>
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-        <CardItem />
-      </ul>
+      <ul className={Cards_List}>{dataView}</ul>
     </section>
   );
-});
+};
 
 export default CardList;

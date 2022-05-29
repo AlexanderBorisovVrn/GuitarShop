@@ -1,5 +1,5 @@
 import { Routes, Route} from "react-router-dom";
-import HomePage from "../Pages/HomePage/HomePage";
+import ProductPage from "../Pages/ProductPage/ProductPage";
 
 export default function AppRoutes(){
   
@@ -7,13 +7,11 @@ export default function AppRoutes(){
 
 return  (
 <Routes>
-  <Route path="/" element={<HomePage/>} />
-  <Route path="electric-guitars/" element={<p>electric guitars</p>}  />
-  <Route path="acoustic-guitars/" element={<p>acouctic guitars</p>} />
-  <Route path="electric-basses/" element={<p>basses guitars</p>} />
-  <Route path="acoustasonic-guitars/" element={<p>acoustasonic-guitars</p>} />
+  <Route path="/" element={<ProductPage/>} />
+  <Route path="/:category/:id" element={<ProductPage/>} />
+  <Route path="/:category/" element={<ProductPage/>}  />
   <Route path="cart/" element={<p>cart</p>} />
-  <Route path="*" element={<HomePage/>}/>
+  <Route path="*" element={<ProductPage/>}/>
 </Routes>
 )
 

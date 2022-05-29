@@ -3,32 +3,32 @@ import { makeAutoObservable } from "mobx";
 import axios from "axios";
 export interface IFetchData {
   isLoading: boolean;
-  data: IProduct | [];
+  data: IProduct[] | [];
   error: boolean;
 }
 
 class FetchData implements IFetchData {
-  isLoading: boolean;
-  error: boolean;
-  data: IProduct | [];
+  isLoading = false;
+  error = false;
+  data = [];
   constructor() {
-    this.isLoading = false;
-    this.error = false;
-    this.data = [];
     makeAutoObservable(this);
   }
-  async fetchData() {
+  fetchData = async () => {
     this.isLoading = true;
     try {
       axios.get("/api.json").then((response) => {
-        this.data = response.data;
-        this.isLoading = false;
+        setTimeout(() => {
+          this.data = response.data;
+          this.isLoading = false;
+        }, 1000);
       });
     } catch (error) {
       this.error = true;
       console.log(error);
+      this.isLoading = false;
     }
-  }
+  };
 }
 
 export default FetchData;
