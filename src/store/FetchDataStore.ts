@@ -1,6 +1,7 @@
 import { IProduct } from "./../types/types";
 import { makeAutoObservable } from "mobx";
 import axios from "axios";
+
 export interface IFetchData {
   isLoading: boolean;
   data: IProduct[] | [];
@@ -8,6 +9,8 @@ export interface IFetchData {
 }
 
 class FetchData implements IFetchData {
+  private _URL:string = "/api.json";
+  
   isLoading = false;
   error = false;
   data = [];
@@ -17,7 +20,7 @@ class FetchData implements IFetchData {
   fetchData = async () => {
     this.isLoading = true;
     try {
-      axios.get("/api.json").then((response) => {
+      axios.get(this._URL).then((response) => {
         setTimeout(() => {
           this.data = response.data;
           this.isLoading = false;

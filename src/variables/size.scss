@@ -1,0 +1,19 @@
+$_XL: 1.25rem;
+$_L: 1rem;
+$_M: 0.75rem;
+$_S: 0.5rem;
+
+.my-xl {
+  margin: $_XL 0;
+}
+.my-l {
+  margin: $_L 0;
+}
+
+.my-m {
+  margin: $_M 0;
+}
+
+.my-s {
+  margin: $_S 0;
+}

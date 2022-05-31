@@ -38,15 +38,21 @@
     width: 16rem;
   }
 }
-.Button_Group {
+.Group {
+  display: flex;
+}
+.Group>li{
   display: flex;
 }
 
 .Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 4rem;
   color: $gray_2;
   font-size: larger;
-  background-color: initial;
+  background-color: inherit;
   border: none;
 }
 

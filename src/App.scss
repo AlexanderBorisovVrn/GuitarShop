@@ -1,5 +1,8 @@
 @import './variables/breakpoints.scss';
 @import './variables/colors.scss';
+@import './variables/size.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
 
 *,*:after, *:before{
   margin: 0;
@@ -68,10 +71,13 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-._Hover_Underline{
+._Hover{
   &:hover{
     color: $primary_1;
-    border-bottom: 4px solid $primary_1;
-    transform:translateY(2px)
+
   }
+}
+._Underline{
+  &:hover{border-bottom: 4px solid $primary_1;
+  transform:translateY(2px)}
 }
