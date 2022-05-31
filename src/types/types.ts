@@ -7,6 +7,7 @@ type Model ={
   price:number,
   handside:string,
   img:string,
+  photo:string[],
   features:string[],
   description:string[]
 }

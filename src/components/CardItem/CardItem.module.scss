@@ -33,17 +33,25 @@
 }
 .Options{
 display: flex;
-flex-direction:column;
+flex-direction: column;
+}
+
+.Options>li{
+  justify-content: flex-end;
+  padding: .25rem 0;
 }
 
 .Price{
   display: flex;
   align-items: center;
-  justify-content: end;
   font-size: 20px;
   color:$gray_4;
 }
 .Price >span{
   color: black;
   font-weight: bold;
+}
+.Count{
+  display: flex;
+  color: $gray_4;
 }

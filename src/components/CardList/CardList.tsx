@@ -7,8 +7,25 @@ const { Cards_List, Sort, Wrap } = style;
 type Props = { data: IProduct[]; category?: string };
 
 const CardList = ({ data, category }: Props) => {
-  const categoryData =category? data.filter((item) => item.category === category):data;
-  
+  const categoryData = category
+    ? data.filter((item) => item.category === category)
+    : data;
+  if (categoryData.length === 0) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "24px",
+        }}
+      >
+        Ничего не найдено :-((
+      </div>
+    );
+  }
+
   const dataView = categoryData.map((item, idx) => {
     return <CardItem item={item} key={idx} />;
   });

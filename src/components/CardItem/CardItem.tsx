@@ -2,15 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import style from "./CardItem.module.scss";
 import { IProduct } from "../../types/types";
+import Counter from "../Counter/Counter";
 type Props = {
   item: IProduct;
 };
 
-const { Img, Title, Item,Options,Price } = style;
+const { Img, Title, Item, Options, Price,Count } = style;
 
 export default function CardItem({ item }: Props) {
   const { category, model } = item;
-  const { name, img, id,price } = model;
+  const { name, img, id, price } = model;
   const link = `/${category}/${id}`;
 
   const transformName = name.toLowerCase();
@@ -21,9 +22,14 @@ export default function CardItem({ item }: Props) {
           <img alt={name} src={img} />
         </div>
         <h4 className={Title}>{transformName}</h4>
-        <div className={Options}>
-          <div className={Price}><span>Price</span>: ${price}</div>
-        </div>
+        <ul className={Options}>
+          <li className={Count} onClick={(e)=>e.preventDefault()}>
+            <Counter />
+          </li>
+          <li className={Price}>
+            <span>Price</span>: ${price}
+          </li>
+        </ul>
       </Link>
     </li>
   );

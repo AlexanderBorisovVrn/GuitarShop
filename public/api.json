@@ -2,14 +2,19 @@
   {
     "category": "electric-guitars",
     "model": {
-      "id":"4jldkfj23",
-      "type":"stratocaster",
+      "id": "4jldkfj23",
+      "type": "stratocaster",
       "name": "American Professional II Stratocaster",
-      "img":"https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113900755_fen_ins_frt_1_rr.jpg",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113900755_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113900755_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113900755_fen_ins_bck_1_rl.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113900755_fen_ins_cbr_1_nr.jpg"
+      ],
       "serial": "0113900755",
       "color": "3-Color Sunburst",
-      "handside":"right",
-      "price":"2200",
+      "handside": "right",
+      "price": "2200",
       "features": [
         "Three V-Mod II single-coil Stratocaster pickups",
         "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
@@ -25,13 +30,17 @@
   {
     "category": "electric-guitars",
     "model": {
-      "id":"8dhsewep",
+      "id": "8dhsewep",
       "name": "AMERICAN PROFESSIONAL II STRATOCASTER HSS",
       "serial": "0113912718",
-      "type":"stratocaster",
-      "img":"https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113912718_fen_ins_frt_1_rr.jpg",
+      "type": "stratocaster",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113912718_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113912718_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113912718_fen_ins_bck_1_rl.jpg"
+      ],
       "color": "Mystic Surf Green",
-      "price":"2000",
+      "price": "2000",
       "features": [
         "Two V-Mod II single-coil Stratocaster pickups",
         "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
@@ -47,14 +56,18 @@
   {
     "category": "electric-guitars",
     "model": {
-      "type":"telecaster",
-      "id":"9wjerkl2",
+      "type": "telecaster",
+      "id": "9wjerkl2",
       "name": " American Professional II Telecaster®",
       "serial": "0113940700",
-      "img":"https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113940700_fen_ins_frt_1_rr.jpg",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113940700_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0113940700_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113940700_fen_ins_bck_1_rl.jpg"
+      ],
       "color": "3-Color Sunburst",
-      "handside":"right",
-      "price":"2100",
+      "handside": "right",
+      "price": "2100",
       "features": [
         "Two V-Mod II single-coil Telecaster pickups",
         "New top-load/string-through Telecaster bridge with compensated brass “bullet” saddles",
@@ -69,14 +82,18 @@
   {
     "category": "electric-guitars",
     "model": {
-      "type":"stratocaster",
+      "type": "stratocaster",
       "name": "AMERICAN PROFESSIONAL II STRATOCASTER",
-      "id":"3j4l257dh",
+      "id": "3j4l257dh",
       "serial": "0113912718",
-      "img":"https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113930719_fen_ins_frt_1_rl.jpg",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113930719_fen_ins_frt_1_rl.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113930719_fen_ins_frt_1_rl.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113930719_fen_ins_bck_1_rr.jpg"
+      ],
       "color": "Miami Blue",
-      "handside":"left",
-      "price":"1900",
+      "handside": "left",
+      "price": "1900",
       "features": [
         "Two V-Mod II single-coil Stratocaster pickups",
         "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
@@ -92,14 +109,18 @@
   {
     "category": "acoustasonic-guitars",
     "model": {
-      "type":"telecaster",
+      "type": "telecaster",
       "name": "ACOUSTASONIC® PLAYER TELECASTER®",
       "serial": "0972213239",
-      "id":"235hdffso",
-      "img":"https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0972213239_fen_ins_frt_1_rr.jpg",
+      "id": "235hdffso",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0972213239_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0972213239_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/ThumbnailJpg/10001/0972213239_fen_ins_bck_1_rl.jpg"
+      ],
       "color": "Brushed Black",
-      "handside":"right",
-      "price":"2200",
+      "handside": "right",
+      "price": "2200",
       "features": [
         "Two pickup systems: Fender Acoustasonic Noiseless; Fishman Under-Saddle Transducer",
         "Acoustic Engine delivers a new and unique set of acoustic and electric voices",
@@ -113,14 +134,18 @@
   {
     "category": "acoustasonic-guitars",
     "model": {
-      "type":"stratocaster",
+      "type": "stratocaster",
       "name": "The American Acoustasonic™ Stratocaster®",
-      "id":"42yd9fsd8uwe",
+      "id": "42yd9fsd8uwe",
       "serial": "0972023200",
-      "img":"https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0972023200_gtr_frt_001_rr.jpg",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0972023200_gtr_frt_001_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0972023200_gtr_frt_001_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0972023200_gtr_back_001_rl.jpg"
+      ],
       "color": "3-Color Sunburst",
-      "handside":"right",
-      "price":"1700",
+      "handside": "right",
+      "price": "1700",
       "features": [
         "Cutting-edge acoustic-electric guitar",
         "Acoustic Engine delivers new body style and tone wood combinations",
@@ -135,14 +160,18 @@
   {
     "category": "electric-basses",
     "model": {
-      "type":"precision",
+      "type": "precision",
       "name": "AMERICAN PROFESSIONAL II PRECISION BASS®",
-      "id":"9rej2k35233",
+      "id": "9rej2k35233",
       "serial": "0193930755",
-      "img":"https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0193930755_fen_ins_frt_1_rr.jpg",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0193930755_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193930755_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193930755_fen_ins_bck_1_rl.jpg"
+      ],
       "color": "Mercury",
-      "handside":"right",
-      "price":"2700",
+      "handside": "right",
+      "price": "2700",
       "features": [
         "Single V-Mod II split-coil Precision Bass pickup",
         "’63 P Bass neck profile",
@@ -151,6 +180,34 @@
       ],
       "description": [
         "The American Professional II Precision Bass® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "The ’63 P Bass profile neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. The new V-Mod II Precision Bass split-coil pickup is more articulate than ever while delivering the punch and growl the P Bass® is known for.",
+        "The American Pro II Precision Bass delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "electric-basses",
+    "model": {
+      "type": "precision",
+      "name": "AMERICAN PROFESSIONAL II PRECISION BASS® LEFT-HAND",
+      "id": "23jltw5j2",
+      "serial": "0193942706",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0193942706_fen_ins_frt_1_rl.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193942706_fen_ins_frt_1_rl.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193942706_fen_ins_bck_1_rr.jpg"
+      ],
+      "color": "Black",
+      "handside": "left",
+      "price": "2600",
+      "features": [
+        "Single V-Mod II split-coil Precision Bass pickup",
+        "’63 P Bass neck profile",
+        "HiMass™ Vintage bridge for increased sustain",
+        "Tapered-shaft tuning machines; Posiflex graphite rods for neck reinforcement"
+      ],
+      "description": [
+        "The American Professional II Precision Bass® Left-Hand draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
         "The ’63 P Bass profile neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. The new V-Mod II Precision Bass split-coil pickup is more articulate than ever while delivering the punch and growl the P Bass® is known for.",
         "The American Pro II Precision Bass delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
       ]

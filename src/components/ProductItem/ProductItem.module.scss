@@ -1,0 +1,44 @@
+@import "src/variables/colors.scss";
+.Layout {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 65% 1fr;
+  gap: 0.5rem;
+}
+.Title,
+.SubTitle {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.SubTitle {
+  margin: 1rem 0;
+}
+
+.About {
+}
+
+.Color {
+  background-color: green;
+}
+.Features, .Description{
+  color: $gray_5;
+}
+
+.Features {
+  margin: 1rem 0;
+  list-style: square outside;
+  list-style-position: inside;
+  font-size: 1.25rem;
+}
+.Features>li{
+  margin: .5rem 0;
+}
+.Description {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+.Description > li {
+  margin: 0.75rem 0;
+  font-family: serif;
+}

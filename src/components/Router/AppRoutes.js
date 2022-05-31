@@ -1,4 +1,5 @@
 import { Routes, Route} from "react-router-dom";
+import ProductItemPage from "../Pages/ProductItemPage/ProductItemPage";
 import ProductPage from "../Pages/ProductPage/ProductPage";
 
 export default function AppRoutes(){
@@ -8,7 +9,7 @@ export default function AppRoutes(){
 return  (
 <Routes>
   <Route path="/" element={<ProductPage/>} />
-  <Route path="/:category/:id" element={<ProductPage/>} />
+  <Route path="/:category/:id" element={<ProductItemPage/>} />
   <Route path="/:category/" element={<ProductPage/>}  />
   <Route path="cart/" element={<p>cart</p>} />
   <Route path="*" element={<ProductPage/>}/>

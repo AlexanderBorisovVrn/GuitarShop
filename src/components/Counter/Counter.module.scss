@@ -1,0 +1,22 @@
+.Wrap{
+  display: flex;
+  height: 100%;
+  color: black;
+  font-weight: bold;
+  
+}
+
+.Btn{
+  height: 100%;
+  width:1.5rem;
+}
+.Inc{
+  order: 1;
+}
+.Dec{
+  order: 3;
+}
+.Count{
+  padding:0 .5rem;
+  order:2
+}
