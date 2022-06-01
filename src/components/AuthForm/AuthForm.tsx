@@ -1,18 +1,74 @@
-import React from "react";
-import style from "./AuthForm.module.scss";
 import CSS from "csstype";
+import style from "./AuthForm.module.scss";
+import { observer } from "mobx-react-lite";
+import store from "../../store/RootStore";
+import { IFormValues, IField } from "./types";
+import MyLoader from "../MyLoader/MyLoader";
+import { SyntheticEvent } from "react";
 import MyButton from "../UI/MyButton";
+import useAuth from "../../hooks/useAuth";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-const { Wrap, _Field } = style;
+const { Wrap, _Field, Err_Message, Field_Inner, Head } = style;
 
-type Props = {};
+const ErrorMsg = ({ msg }: { msg: string }) => {
+  return <div className={Err_Message}>Введите {msg}</div>;
+};
 
-interface IFormValues {
-  username: string;
-  password: string;
-}
+const MyFormField = ({ field }: { field: IField }) => {
+  return (
+    <div className={_Field}>
+      <Field
+        type={field.type}
+        placeholder={field.name}
+        name={field.id}
+        className={Field_Inner}
+      />
+      <ErrorMessage
+        name={field.id}
+        component="div"
+        render={() => <ErrorMsg msg={field.name} />}
+      />
+    </div>
+  );
+};
 
-export default function AuthForm({}: Props) {
+const fields: IField[] = [
+  { id: "username", name: "имя пользователя", type: "text", initialValue: "" },
+  { id: "password", name: "пароль", type: "password", initialValue: "" },
+];
+
+function AuthForm() {
+  const { validationUser } = useAuth();
+  const isAuthOpen = store.authStore.isAuthOpen;
+
+  const onClose = (e: SyntheticEvent) => {
+    if (e.target === e.currentTarget) {
+      store.authStore.onAuthInvisible();
+    }
+  };
+
+  const onSubmit = async (
+    values: IFormValues,
+    actions: { setSubmitting: (a: boolean) => void }
+  ) => {
+    const user = await validationUser(values);
+    if (user) {
+      store.authStore.signin(user.username);
+      actions.setSubmitting(true);
+    }
+  };
+
+  const validation = (values: IFormValues) => {
+    const errors = {} as IFormValues;
+    if (!values.username) {
+      errors.username = "Required Username";
+    }
+    if (!values.password) {
+      errors.password = "Required Password";
+    }
+    return errors;
+  };
+
   const formStyles: CSS.Properties = {
     width: "25rem",
     height: "25rem",
@@ -21,64 +77,48 @@ export default function AuthForm({}: Props) {
     display: "flex",
     flexDirection: "column",
   };
-  const fieldStyle: CSS.Properties = {
-    width: "100%",
-    padding: "5px",
-  };
-  const fieldRequire = (field: string) => {
-    return <div>{field} require</div>;
+
+  const initialValues: IFormValues = Object.fromEntries(
+    fields.map((field: IField) => {
+      return [field.id, field.initialValue];
+    })
+  );
+  const showSubmitIcon = (isSubmitting: boolean) => {
+    if (isSubmitting) {
+      return <MyLoader color="white" size="sm" />;
+    } else {
+      return "Submit";
+    }
   };
 
-  const initialValues: IFormValues = { username: "", password: "" };
+  if (!isAuthOpen) {
+    return null;
+  }
 
   return (
-    <div className={Wrap}>
+    <div onClick={onClose} className={Wrap}>
       <Formik
         initialValues={initialValues}
-        validate={(values) => {
-          const errors = {} as IFormValues;
-          if (!values.username) {
-            errors.username = "Required Username";
-          }
-          if (!values.password) {
-            errors.password = "Required Password";
-          }
-          return errors;
-        }}
-        onSubmit={(values, {}) => {}}
+        validate={validation}
+        onSubmit={onSubmit}
       >
-        {({ isSubmitting, isValid }) => (
-          <Form style={formStyles}>
-            <div className={_Field}>
-              <Field
-                type="text"
-                placeholder="Username"
-                name="username"
-                style={{ ...fieldStyle }}
-              />
-              <ErrorMessage
-                name="username"
-                render={() => fieldRequire("username")}
-              />
-            </div>
-            <div className={_Field}>
-              <Field
-                type="password"
-                placeholder="Password"
-                name="password"
-                style={{ ...fieldStyle }}
-              />
-              <ErrorMessage
-                name="password"
-                component="div"
-                render={() => fieldRequire("username")}
-              />
-            </div>
-
-            <MyButton type="submit">Submit</MyButton>
-          </Form>
-        )}
+        {({ isSubmitting, isValid, values }) => {
+          return (
+            <Form style={formStyles}>
+              <div className={Head}>
+                <h1>Auth</h1>
+                <i onClick={onClose} className="fa-solid fa-xmark"></i>
+              </div>
+              {fields.map((field) => (
+                <MyFormField key={field.id} field={field} />
+              ))}
+              <MyButton type="submit">{showSubmitIcon(isSubmitting)}</MyButton>
+            </Form>
+          );
+        }}
       </Formik>
     </div>
   );
 }
+
+export default observer(AuthForm);

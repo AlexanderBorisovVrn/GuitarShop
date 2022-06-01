@@ -1,9 +1,11 @@
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
-import { useJoinClassNames } from "../../hooks/useJoinClassNames";
 import logo from "../../img/logo/logo.svg";
 import NavTabs from "../NavTabs/NavTabs";
 import AuthPanel from "../AuthPanel/AuthPanel";
+import store from "../../store/RootStore";
+import { observer } from "mobx-react-lite";
+
 const {
   _Header,
   HeaderLink,
@@ -15,21 +17,24 @@ const {
   Burger,
 } = styles;
 
-type Props = {};
+const finalStyles = {
+  containerStyles: ["Container", Header_Container_SpaceBetween].join(" "),
 
-export default function Header({}: Props) {
-  const containerStyles = useJoinClassNames(
-    "Container",
-    Header_Container_SpaceBetween
-  );
-  const searchButtonStyles = useJoinClassNames(
-    Button,
-    Button_Border,
-    "_Underline",
-    "_Hover"
-  );
-  const cartButtonStyles = useJoinClassNames(Button,"_Hover");
-  const burgerButtonStyle = useJoinClassNames(Button, Burger);
+  searchButtonStyles: [Button, Button_Border, "_Underline", "_Hover"].join(" "),
+  cartButtonStyles: [Button, "_Hover"].join(" "),
+  burgerButtonStyle: [Button, Burger].join(" "),
+};
+
+function Header() {
+  const {
+    containerStyles,
+    searchButtonStyles,
+    cartButtonStyles,
+    burgerButtonStyle,
+  } = finalStyles;
+
+  const { onAuthVisible, signout, isAuth, user } = store.authStore;
+  const openAuthFormHandler = isAuth ? () => {} : onAuthVisible;
 
   return (
     <header className={_Header}>
@@ -46,8 +51,12 @@ export default function Header({}: Props) {
         <NavTabs />
         <ul className={Group}>
           <li>
-          <button type="button" className={cartButtonStyles}>
-              <AuthPanel/>
+            <button
+              type="button"
+              onClick={openAuthFormHandler}
+              className={cartButtonStyles}
+            >
+              <AuthPanel prop={{ user, signout }} />
             </button>
           </li>
           <li>
@@ -66,3 +75,5 @@ export default function Header({}: Props) {
     </header>
   );
 }
+
+export default observer(Header);

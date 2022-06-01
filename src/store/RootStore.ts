@@ -1,10 +1,13 @@
 import FetchDataStore from "./FetchDataStore";
+import AuthStore from "./AuthStore";
 
 class RootStore{
-  fetchStore:  FetchDataStore;
+  fetchStore:FetchDataStore;
+  authStore:AuthStore
   
   constructor(){
-    this.fetchStore =new FetchDataStore()
+    this.fetchStore =new FetchDataStore();
+    this.authStore = new AuthStore();
   }
 }
 
