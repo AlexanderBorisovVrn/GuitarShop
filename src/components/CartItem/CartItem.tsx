@@ -1,10 +1,13 @@
 import React from "react";
 import { IProduct } from "../../types/types";
 import style from "./CartItem.module.scss";
-const { Wrap, Item, Img, Price, Count, Name,Check } = style;
+const { Wrap, Item, Img, Price, Count, Name, Check } = style;
 type Props = { item?: IProduct };
 
 export default function CartItem({ item }: Props) {
+  const optionsCount = new Array(10).fill(null).map((el, i) => {
+    return <option value={i + 1}>{i + 1}</option>;
+  });
   return (
     <li className={Wrap}>
       <ul className={Item}>
@@ -27,9 +30,7 @@ export default function CartItem({ item }: Props) {
         </li>
         <li className={Count}>
           <select name="count" id="count">
-            {new Array(10).fill(null).map((el,i)=>{
-              return <option value={i+1}>{i+1}</option>
-            })}
+            {optionsCount}
           </select>
         </li>
       </ul>

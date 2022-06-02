@@ -1,20 +1,18 @@
 import React from "react";
+import GridContainer from "../GridContainer/GridContainer";
+import CartItem from '../CardItem/CardItem';
+import OrderList from '../OrederList/OrderList';
+import Order from '../Order/Order';
+import store from '../../store/RootStore';
+import { observer } from "mobx-react-lite";
+type Props = {};
 
-type Props = {
-  left:React.ReactNode,
-  right:React.ReactNode
-};
+ function CartContainer({}: Props) {
 
-export default function CartContainer({left,right}: Props) {
-  const partStyles = {borderRadius:'5px'}
-  return (
-    <div
-      className="Container"
-      style={{ display: "grid", gridTemplateColumns: " 65% 1fr", gap: "1rem" }}
-    >
-      <section style={partStyles}></section>
 
-      <section style={partStyles}></section>
-    </div>
-  );
+  return <GridContainer
+    left={<OrderList/>}
+    right={<Order/>}/>;
 }
+
+export default observer(CartContainer)

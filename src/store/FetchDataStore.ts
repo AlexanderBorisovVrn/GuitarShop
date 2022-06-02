@@ -17,6 +17,9 @@ class FetchData implements IFetchData {
   constructor() {
     makeAutoObservable(this);
   }
+  get newData(){
+    return this.data
+  }
   fetchData = async () => {
     this.isLoading = true;
     try {

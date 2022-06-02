@@ -24,7 +24,7 @@ export default function CardItem({ item }: Props) {
         <h4 className={Title}>{transformName}</h4>
         <ul className={Options}>
           <li className={Count} onClick={(e)=>e.preventDefault()}>
-            <Counter />
+            <Counter id={item.model.id}/>
           </li>
           <li className={Price}>
             <span>Price</span>: ${price}
