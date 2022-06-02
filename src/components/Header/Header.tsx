@@ -15,6 +15,7 @@ const {
   Group,
   Button_Border,
   Burger,
+  Cart_Counter,
 } = styles;
 
 const finalStyles = {
@@ -61,7 +62,13 @@ function Header() {
           </li>
           <li>
             <button type="button" className={cartButtonStyles}>
-              <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+              <Link
+                to="/cart"
+                style={{ color: "inherit", width: "100%", display: "flex" }}
+              >
+                <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+              </Link>
+              <span className={Cart_Counter}>4</span>
             </button>
           </li>
 

@@ -12,9 +12,7 @@ export default function ImgGallery({ links }: Props) {
 
   const imageList = links.map((link) => {
     const currentClass =
-      link === currentImg
-        ? [Current_Img, isCurrent].join(' ')
-        : Current_Img;
+      link === currentImg ? [Current_Img, isCurrent].join(" ") : Current_Img;
     return (
       <li
         key={link}

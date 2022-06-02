@@ -16,7 +16,7 @@ const navLinks: ILink[] = [
 ];
 
 export default function NavTabs({}: Props) {
-  const linkStyles = [Tab_Link, "_Hover_Underline"].join(" ");
+  const linkStyles = [Tab_Link, "_Hover","_Underline"].join(" ");
 
   const links = navLinks.map((link) => {
     return (

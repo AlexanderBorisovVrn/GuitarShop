@@ -51,7 +51,7 @@ export default function ProductItem({ item }: Props) {
             Color:
             <span> {color}</span>
           </div>
-          <button type="button">
+          <button type="button" style={{boxShadow:'2px 2px 6px black'}}>
             <span className={Btn_Icon}>&#10010;</span> Add to Cart
           </button>
         </aside>

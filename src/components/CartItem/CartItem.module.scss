@@ -1,0 +1,38 @@
+@import '/src/variables/colors.scss';
+.Wrap{
+  height: 12rem;
+  padding: .75rem 0;
+  border-bottom: 1px solid $gray_1;
+}
+
+.Item{
+  display: grid;
+  grid-template-columns: 10% 20% 40%  1fr 1fr;
+  & li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.Check{
+  padding: 0 1rem;
+}
+.Img{
+  height: 100%;
+  width: 3.5rem;
+}
+.Name{
+  width: 10rem;
+}
+.Count{
+  & select{
+    width: 5rem;
+    height: 2rem;
+    padding: .5rem;
+    font-weight: 500;
+    color: $gray_4;
+    & option{
+      
+    }
+  }
+}

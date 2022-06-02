@@ -47,6 +47,7 @@
 }
 
 .Button {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +56,20 @@
   font-size: larger;
   background-color: inherit;
   border: none;
+}
+.Cart_Counter{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .1rem;
+  min-width: 22px;
+  background-color: $primary_2;
+  font-size: 14px;
+  color: white;
+  border-radius: 50%;
+  top:.45rem;
+  right:0.2rem
 }
 
 .Button_Border {

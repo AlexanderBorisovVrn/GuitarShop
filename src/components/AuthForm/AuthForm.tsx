@@ -76,6 +76,7 @@ function AuthForm() {
     backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
+    position:'fixed'
   };
 
   const initialValues: IFormValues = Object.fromEntries(

@@ -17,7 +17,7 @@ export default function CardItem({ item }: Props) {
   const transformName = name.toLowerCase();
   return (
     <li className={Item}>
-      <Link to={link}>
+      <Link to={link} style={{flexDirection:'column'}}>
         <div className={Img}>
           <img alt={name} src={img} />
         </div>
