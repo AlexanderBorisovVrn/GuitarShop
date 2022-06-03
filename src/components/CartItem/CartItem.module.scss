@@ -1,38 +1,42 @@
-@import '/src/variables/colors.scss';
-.Wrap{
+@import "/src/variables/colors.scss";
+.Wrap {
   height: 12rem;
-  padding: .75rem 0;
+  padding: 0.75rem 0;
   border-bottom: 1px solid $gray_1;
 }
 
-.Item{
-  display: grid;
-  grid-template-columns: 10% 20% 40%  1fr 1fr;
-  & li{
+.Item {
+ display: flex;
+ justify-content: space-between;
+  height: 100%;
+  & li {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 1rem;
   }
 }
-.Check{
-  padding: 0 1rem;
+.Check {
+  width: 3rem;
 }
-.Img{
+.Img {
   height: 100%;
-  width: 3.5rem;
 }
-.Name{
-  width: 10rem;
+ .Name {
+ flex-direction: column;
+ font-size: 20px;
+  & span{
+    display: block;
+  }
 }
-.Count{
-  & select{
+.Count {
+  & select {
     width: 5rem;
     height: 2rem;
-    padding: .5rem;
+    padding: 0.5rem;
     font-weight: 500;
     color: $gray_4;
-    & option{
-      
+    & option {
     }
   }
 }

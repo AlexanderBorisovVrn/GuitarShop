@@ -1,8 +1,9 @@
 @import '../../variables/colors.scss';
 
 .Img{
-  height: 70%;
+  display: block;
   padding: 5px;
+  height: 70%;
 }
 .Img>img{
   object-fit: contain;

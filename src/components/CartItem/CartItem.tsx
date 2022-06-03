@@ -1,8 +1,7 @@
-import React from "react";
-import { IProduct } from "../../types/types";
+import { IItem } from "../../store/CartStore";
 import style from "./CartItem.module.scss";
 const { Wrap, Item, Img, Price, Count, Name, Check } = style;
-type Props = { item?: IProduct };
+type Props = { item?: IItem };
 
 export default function CartItem({ item }: Props) {
   const optionsCount = new Array(10).fill(null).map((el, i) => {
@@ -16,16 +15,16 @@ export default function CartItem({ item }: Props) {
         </li>
         <li className={Img}>
           <img
-            src="https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0972013288_fen_ins_frt_1_rr.jpg"
+            src={item?.img}
             alt=""
           />
         </li>
         <li className={Name}>
-          <span>american professional telecaster</span>
-          <span>Color black</span>
+          <span>{item?.title}</span>
+          <span>{item?.color}</span>
         </li>
         <li className={Price}>
-          <span>$2200</span>
+          <span>{item?.price}</span>
           <span>$100</span>
         </li>
         <li className={Count}>

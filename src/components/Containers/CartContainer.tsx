@@ -1,18 +1,22 @@
-import React from "react";
 import GridContainer from "../GridContainer/GridContainer";
-import CartItem from '../CardItem/CardItem';
-import OrderList from '../OrederList/OrderList';
-import Order from '../Order/Order';
-import store from '../../store/RootStore';
+import OrderList from "../OrederList/OrderList";
+import Order from "../Order/Order";
+import store from "../../store/RootStore";
 import { observer } from "mobx-react-lite";
 type Props = {};
 
- function CartContainer({}: Props) {
+function CartContainer({}: Props) {
+  const orderList = store.cartStore.cart;
+  if (orderList.length === 0) {
+    return <p style={{ fontSize: "30px",width:'100%',display:'flex',justifyContent:'center'}}>Корзина пуста</p>;
+  }
 
-
-  return <GridContainer
-    left={<OrderList/>}
-    right={<Order/>}/>;
+  return (
+    <GridContainer
+      left={<OrderList orderList={orderList} />}
+      right={<Order />}
+    />
+  );
 }
 
-export default observer(CartContainer)
+export default observer(CartContainer);

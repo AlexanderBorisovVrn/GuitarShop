@@ -14,12 +14,13 @@ function Counter({ id }: Props) {
   };
   const decDisabled = counter === 0 ? true : false;
   const increment = () => {
-    store.cartStore.updateCart(id,1)
+    store.cartStore.updateCart(id, 1);
     setCounter(counter + 1);
   };
   const decrement = () => {
-    store.cartStore.updateCart(id,-1)
-    setCounter(counter - 1)};
+    store.cartStore.updateCart(id, -1);
+    setCounter(counter - 1);
+  };
   return (
     <div className={Wrap}>
       Add to cart:&nbsp;
