@@ -14,7 +14,7 @@ function CartContainer({}: Props) {
   return (
     <GridContainer
       left={<OrderList orderList={orderList} />}
-      right={<Order />}
+      right={<Order total={store.cartStore.orderTotal} checkOut={()=>console.log('checkout')}/>}
     />
   );
 }

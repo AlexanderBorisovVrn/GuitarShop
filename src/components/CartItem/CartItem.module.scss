@@ -6,30 +6,33 @@
 }
 
 .Item {
- display: flex;
- justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   height: 100%;
   & li {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 0 .5rem;
   }
 }
 .Check {
-  width: 3rem;
+  width: calc(10% - 1rem);
 }
 .Img {
+  width: calc(10% - 1rem);
   height: 100%;
 }
- .Name {
- flex-direction: column;
- font-size: 20px;
-  & span{
+.Name {
+  width: calc(50% - 1rem);
+  flex-direction: column;
+  font-size: 20px;
+  & span {
     display: block;
   }
 }
-.Count {
+.Count, .Price {
+  width: calc(10% - 1rem);
   & select {
     width: 5rem;
     height: 2rem;

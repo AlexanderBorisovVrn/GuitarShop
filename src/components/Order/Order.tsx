@@ -2,9 +2,12 @@ import MyButton from '../UI/MyButton';
 import style from './Order.module.scss';
 const {  Wrap, Total, } = style;
 
-type Props = {}
+type Props = {
+  total:number;
+  checkOut:()=>void
+}
 
-export default function Order({}: Props) {
+export default function Order({total,checkOut}: Props) {
   return (
     <div className={Wrap}>
             <h2>Order</h2>
@@ -12,7 +15,7 @@ export default function Order({}: Props) {
             <ul className={Total}>
               <li>
                 <span>Sub-total:</span>
-                <span>$15</span>
+                <span>${total}</span>
               </li>
               <li>
                 <span>Delivery costs:</span>
@@ -20,7 +23,7 @@ export default function Order({}: Props) {
               </li>
               <li>
                 <span>Total:</span>
-                <span>$15</span>
+                <span>${total}</span>
               </li>
             </ul>
             <MyButton

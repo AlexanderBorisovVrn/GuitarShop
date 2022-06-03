@@ -1,4 +1,3 @@
-import React, { FC } from "react";
 import style from "./CardList.module.scss";
 import { IProduct } from "../../types/types";
 import CardItem from "../CardItem/CardItem";
@@ -7,6 +6,7 @@ const { Cards_List, Sort, Wrap } = style;
 type Props = { data: IProduct[]; category?: string };
 
 const CardList = ({ data, category }: Props) => {
+  
   const categoryData = category
     ? data.filter((item) => item.category === category)
     : data;
