@@ -5,7 +5,7 @@ type Props = { item?: IItem };
 
 export default function CartItem({ item }: Props) {
   const optionsCount = new Array(10).fill(null).map((el, i) => {
-    return <option value={i + 1}>{i + 1}</option>;
+    return <option key={i} value={i + 1}>{i + 1}</option>;
   });
   return (
     <li className={Wrap}>
@@ -20,17 +20,18 @@ export default function CartItem({ item }: Props) {
           />
         </li>
         <li className={Name}>
-          <span>{item?.title}</span>
-          <span>{item?.color}</span>
+          <div>{item?.title}</div>
+          <div>Color: {item?.color}</div>
         </li>
         <li className={Price}>
-          <span>{item?.price}</span>
-          <span>$100</span>
+          <div>Price: ${item?.price}</div>
+          <div>Discount: $100</div>
         </li>
         <li className={Count}>
           <select name="count" id="count">
             {optionsCount}
           </select>
+          <div>Удалить</div>
         </li>
       </ul>
     </li>

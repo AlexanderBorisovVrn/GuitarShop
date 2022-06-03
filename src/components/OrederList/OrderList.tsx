@@ -10,7 +10,7 @@ type Props = {
 
 export default function OrderList({ orderList }: Props) {
   const cartItemList = orderList.map((orderItem: IItem) => (
-    <CartItem  item={orderItem} />
+    <CartItem key={orderItem.id} item={orderItem} />
   ));
  
   return (

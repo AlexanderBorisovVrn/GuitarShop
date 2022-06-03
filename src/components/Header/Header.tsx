@@ -26,6 +26,8 @@ const finalStyles = {
   burgerButtonStyle: [Button, Burger].join(" "),
 };
 
+
+
 function Header() {
   const {
     containerStyles,
@@ -36,7 +38,7 @@ function Header() {
 
   const { onAuthVisible, signout, isAuth, user } = store.authStore;
   const openAuthFormHandler = isAuth ? () => {} : onAuthVisible;
-
+  const getItemsInCart = store.cartStore.itemsInCart() ||0 ;
   return (
     <header className={_Header}>
       <div className={containerStyles}>
@@ -68,7 +70,7 @@ function Header() {
               >
                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
               </Link>
-              <span className={Cart_Counter}>4</span>
+              <span className={Cart_Counter}>{getItemsInCart}</span>
             </button>
           </li>
 

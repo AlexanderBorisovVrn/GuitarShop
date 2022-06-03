@@ -24,7 +24,12 @@ export default class CartStore implements ICart {
     makeAutoObservable(this);
     this.getCartFromStorage();
   }
-
+ itemsInCart=()=>{
+  let itemsInCart = this.cart.reduce((previous:number, current:IItem) => {
+  return  previous += current.count
+  },0)
+  return itemsInCart;
+ }
   saveCartToStorage = () => {
     const cart = JSON.stringify(this.cart);
     localStorage.setItem("cart", cart);
@@ -60,6 +65,7 @@ export default class CartStore implements ICart {
         this.cart = this.cart.filter((item: IItem) => item.id !== idx);
       }
     }
+
     this.saveCartToStorage();
   };
 }

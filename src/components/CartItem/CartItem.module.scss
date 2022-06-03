@@ -11,28 +11,52 @@
   height: 100%;
   & li {
     display: flex;
-    align-items: center;
     justify-content: center;
     padding: 0 .5rem;
   }
 }
 .Check {
+  align-items: center;
   width: calc(10% - 1rem);
 }
 .Img {
   width: calc(10% - 1rem);
-  height: 100%;
 }
 .Name {
-  width: calc(50% - 1rem);
+  width: calc(40% - 1rem);
   flex-direction: column;
-  font-size: 20px;
-  & span {
-    display: block;
+  height: 100%;
+  font-size: 18px;
+  & :first-child{
+    text-transform: uppercase;
+    margin: .5rem 0;
+  }
+  & :last-child{
+    display: flex;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: $gray_4;
   }
 }
-.Count, .Price {
-  width: calc(10% - 1rem);
+.Price{
+  flex-direction: column;
+  width: calc(15% - 1rem);
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  & div{
+    padding: .5rem 0;
+  }
+}
+.Count {
+  flex-direction: column;
+  align-items: center;
+  width: calc(15% - 1rem);
+  & div{
+    margin: .5rem 0;
+    color: $secondary_1;
+    cursor: pointer;
+  }
   & select {
     width: 5rem;
     height: 2rem;
