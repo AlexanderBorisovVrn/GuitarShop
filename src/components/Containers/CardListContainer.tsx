@@ -5,15 +5,20 @@ import store from "../../store/RootStore";
 import MyLoader from "../MyLoader/MyLoader";
 import Error from "../Error/Error";
 import { useParams } from "react-router-dom";
+import { IProduct } from "../../types/types";
 
 type Props = {};
 
 const CardListContainer = observer(({}: Props) => {
-  const params = useParams();
-
+  const { category } = useParams();
+  const { data } = store.fetchStore;
   useEffect(() => {
     store.fetchStore.fetchData();
   }, []);
+
+  const filteredData = category
+    ? data.filter((item: IProduct) => item.category === category)
+    : data;
 
   if (store.fetchStore.isLoading) {
     return (
@@ -26,14 +31,30 @@ const CardListContainer = observer(({}: Props) => {
           height: "80vh",
         }}
       >
-        <MyLoader color='primary' size="lg" />
+        <MyLoader color="primary" size="lg" />
       </div>
     );
   }
   if (store.fetchStore.error) {
     return <Error />;
   }
-  return <CardList data={store.fetchStore.data} category={params.category} />;
+
+  if (filteredData.length === 0) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          height: "100vh",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "24px",
+        }}
+      >
+        Ничего не найдено :-((
+      </div>
+    );
+  }
+  return <CardList data={filteredData} />;
 });
 
 export default CardListContainer;

@@ -1,10 +1,11 @@
+import useData from "../../hooks/useData";
 import style from "./SideBar.module.scss";
-import { useLocation } from "react-router-dom";
 const {Aside,Field_Set}=style;
 type Props = {};
 
 export default function Sidebar({}: Props) {
-  const location = useLocation();
+  const data = useData();
+  
   return (
     <aside className={Aside}>
       <h1>Filters</h1>
