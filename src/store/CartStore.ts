@@ -4,7 +4,6 @@ import useData from "../hooks/useData";
 
 export interface ICart {
   cart: IItem[] | [];
-  orderTotal: number;
 }
 export interface IItem {
   id: string | number;
@@ -18,30 +17,38 @@ export interface IItem {
 
 export default class CartStore implements ICart {
   cart = [] as any;
-  orderTotal = 0;
 
   constructor() {
     makeAutoObservable(this);
     this.getCartFromStorage();
   }
- itemsInCart=()=>{
-  let itemsInCart = this.cart.reduce((previous:number, current:IItem) => {
-  return  previous += current.count
-  },0)
-  return itemsInCart;
- }
+  get orderTotal(){
+    return this.cart.reduce((previous:number, current:IItem) => {
+      return previous+=current.total
+    }, 0)
+  }
+  itemsInCart = () => {
+    let itemsInCart = this.cart.reduce((previous: number, current: IItem) => {
+      return (previous += current.count);
+    }, 0);
+    return itemsInCart;
+  };
   saveCartToStorage = () => {
     const cart = JSON.stringify(this.cart);
     localStorage.setItem("cart", cart);
   };
   getCartFromStorage = () => {
     const cart = localStorage.getItem("cart");
-    this.cart = JSON.parse(cart || "{}");
+    if (cart) {
+      this.cart = JSON.parse(cart || "{}");
+    }
+    return
   };
 
   updateCart = (idx: string | number, quantity: number) => {
     const data = useData();
     const itemIdx = this.cart.findIndex((item: IItem) => item.id === idx);
+
     const guitar: any = data.find(
       (guitar: IProduct) => guitar.model.id === idx
     );
@@ -65,7 +72,6 @@ export default class CartStore implements ICart {
         this.cart = this.cart.filter((item: IItem) => item.id !== idx);
       }
     }
-
     this.saveCartToStorage();
   };
 }

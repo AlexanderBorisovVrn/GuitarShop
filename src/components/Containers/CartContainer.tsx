@@ -10,7 +10,7 @@ function CartContainer({}: Props) {
   if (orderList.length === 0) {
     return <p style={{ fontSize: "30px",width:'100%',display:'flex',justifyContent:'center'}}>Корзина пуста</p>;
   }
-
+  const total = store.cartStore.orderTotal;
   return (
     <GridContainer
       left={<OrderList orderList={orderList} />}

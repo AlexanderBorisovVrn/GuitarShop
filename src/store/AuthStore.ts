@@ -21,13 +21,18 @@ export default class AuthStore implements IAuth {
   onAuthVisible = () => {
     this.isAuthOpen = true;
   };
-  signin = (newUser: string) => {
+  signin = (newUser: string, callback?: () => void) => {
     this.user = newUser;
     this.isAuth = true;
-    this.onAuthInvisible();
+    if (callback) {
+      callback();
+    }
   };
-  signout = () => {
+  signout = (callback?:()=>void) => {
     this.user = "";
-    this.isAuth=false;
+    this.isAuth = false;
+    if(callback){
+      callback();
+    }
   };
 }

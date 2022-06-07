@@ -1,13 +1,14 @@
 import CSS from "csstype";
+import { Navigate, useNavigate, useLocation } from "react-router-dom";
 import style from "./AuthForm.module.scss";
 import { observer } from "mobx-react-lite";
 import store from "../../store/RootStore";
-import { IFormValues, IField } from "./types";
+import { IFormValues, IField, stateType } from "./types";
 import MyLoader from "../MyLoader/MyLoader";
-import { SyntheticEvent } from "react";
+import React, { SyntheticEvent } from "react";
 import MyButton from "../UI/MyButton";
 import useAuth from "../../hooks/useAuth";
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form, Field, ErrorMessage, replace } from "formik";
 const { Wrap, _Field, Err_Message, Field_Inner, Head } = style;
 
 const ErrorMsg = ({ msg }: { msg: string }) => {
@@ -39,11 +40,14 @@ const fields: IField[] = [
 
 function AuthForm() {
   const { validationUser } = useAuth();
-  const isAuthOpen = store.authStore.isAuthOpen;
+  const location = useLocation();
+  let navigate = useNavigate();
+  const state = location.state as stateType;
+  const onSubmitRedirect = ()=>{navigate(state?.from?.pathname)}
 
   const onClose = (e: SyntheticEvent) => {
-    if (e.target === e.currentTarget) {
-      store.authStore.onAuthInvisible();
+    if (e.currentTarget === e.target) {
+      navigate("/");
     }
   };
 
@@ -52,8 +56,9 @@ function AuthForm() {
     actions: { setSubmitting: (a: boolean) => void }
   ) => {
     const user = await validationUser(values);
+
     if (user) {
-      store.authStore.signin(user.username);
+      store.authStore.signin(user.username,onSubmitRedirect);
       actions.setSubmitting(true);
     }
   };
@@ -76,7 +81,7 @@ function AuthForm() {
     backgroundColor: "white",
     display: "flex",
     flexDirection: "column",
-    position:'fixed'
+    position: "fixed",
   };
 
   const initialValues: IFormValues = Object.fromEntries(
@@ -91,10 +96,6 @@ function AuthForm() {
       return "Submit";
     }
   };
-
-  if (!isAuthOpen) {
-    return null;
-  }
 
   return (
     <div onClick={onClose} className={Wrap}>
@@ -120,6 +121,19 @@ function AuthForm() {
       </Formik>
     </div>
   );
+}
+
+export function RequireAuth({
+  children,
+}: {
+  children: JSX.Element;
+}): JSX.Element {
+  let location = useLocation();
+
+  if (!store.authStore.isAuth) {
+    return <Navigate to="/auth" state={{ from: location }} replace />;
+  }
+  return children;
 }
 
 export default observer(AuthForm);

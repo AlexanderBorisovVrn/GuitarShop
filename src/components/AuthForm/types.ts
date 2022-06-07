@@ -14,4 +14,6 @@ export interface IUser {
   password: string;
 }
 
-
+export interface stateType {
+  from:{pathname:string}
+}

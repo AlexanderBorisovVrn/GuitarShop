@@ -1,9 +1,10 @@
 import styles from "./Header.module.scss";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import logo from "../../img/logo/logo.svg";
 import NavTabs from "../NavTabs/NavTabs";
 import AuthPanel from "../AuthPanel/AuthPanel";
 import store from "../../store/RootStore";
+
 import { observer } from "mobx-react-lite";
 
 const {
@@ -36,9 +37,9 @@ function Header() {
     burgerButtonStyle,
   } = finalStyles;
 
-  const { onAuthVisible, signout, isAuth, user } = store.authStore;
-  const openAuthFormHandler = isAuth ? () => {} : onAuthVisible;
-  const getItemsInCart = store.cartStore.itemsInCart() ||0 ;
+  const { signout, user } = store.authStore;
+
+  const itemsInCart = store.cartStore.itemsInCart() ||0 ;
   return (
     <header className={_Header}>
       <div className={containerStyles}>
@@ -56,7 +57,6 @@ function Header() {
           <li>
             <button
               type="button"
-              onClick={openAuthFormHandler}
               className={cartButtonStyles}
             >
               <AuthPanel prop={{ user, signout }} />
@@ -70,7 +70,7 @@ function Header() {
               >
                 <i className="fa fa-shopping-cart" aria-hidden="true"></i>
               </Link>
-              <span className={Cart_Counter}>{getItemsInCart}</span>
+              <span className={Cart_Counter}>{itemsInCart}</span>
             </button>
           </li>
 

@@ -3,6 +3,10 @@ $drop-height:6rem;
 $drop-width:8rem;
 .Wrap {
   display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .Drop {
@@ -28,10 +32,3 @@ $drop-width:8rem;
   color:white
 }
 
-.Icon{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
