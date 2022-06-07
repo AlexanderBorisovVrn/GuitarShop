@@ -212,5 +212,61 @@
         "The American Pro II Precision Bass delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
       ]
     }
+  },
+  {
+    "category": "electric-basses",
+    "model": {
+      "type": "precision",
+      "name": "AMERICAN ULTRA PRECISION BASS®",
+      "id": "23jl53jsds",
+      "serial": "0199010732",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0199010732_gtr_frt_001_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0199010732_gtr_frt_001_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0199010732_gtr_back_001_rl.jpg",
+        "https://www.fmicassets.com/Damroot/ThumbnailJpg/10001/0199010732_gtr_frtbdydtl_001_nr.jpg"
+      ],
+      "color": "Mocha Burst",
+      "handside": "right",
+      "price": "2150",
+      "features": [
+        "Alder or ash body",
+        "One Ultra Noiseless Vintage split-coil P Bass® pickup; one Ultra Noiseless Vintage single-coil Jazz Bass pickup",
+        "“Modern D”-shaped neck profile",
+        "10”-14” compound-radius fingerboard; 21 medium-jumbo frets"
+      ],
+      "description": [
+        "American Ultra is our most advanced series of guitars and basses for discerning players who demand the ultimate in precision, performance and tone. The American Ultra Precision Bass features a unique “Modern D” neck profile with Ultra rolled fingerboard edges for hours of playing comfort, and the tapered neck heel allows easy access to the highest register. A speedy 10”-14” compound-radius fingerboard with 21 medium-jumbo frets means effortless action, while the Ultra Noiseless™ Vintage pickups and advanced wiring options provide endless tonal possibilities – without hum. The sculpted rear body contours are as beautiful as they are functional. This versatile, state-of-the-art instrument will inspire you to push your playing to new heights.",
+        "Other features include “F”-stamped lightweight vintage-paddle tuning machines with tapered shafts, chrome hardware and bone nut. Includes premium molded hardshell case."
+      ]
+    }
+  },
+  {
+    "category": "electric-basses",
+    "model": {
+      "type": "jazz",
+      "name": "AMERICAN ULTRA JAZZ BASS® V",
+      "id": "643jlsd09",
+      "serial": "0199030712",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0199030712_gtr_frt_001_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0199030712_gtr_frt_001_rr.jpg",
+        "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0199030712_gtr_back_001_rl.jpg",
+        "https://www.fmicassets.com/Damroot/ThumbnailJpg/10001/0199030712_gtr_cntbdyright_002_nr.jpg"
+      ],
+      "color": "Ultraburst",
+      "handside": "right",
+      "price": "2450",
+      "features": [
+        "Alder or ash body with sculpted rear contours",
+        "“Modern D”-shaped neck profile with Ultra satin finish",
+        "Bound 10”-14” compound-radius fingerboard; 21 medium-jumbo frets",
+        "Two Noiseless Vintage Jazz Bass pickups"
+      ],
+      "description": [
+        "American Ultra is our most advanced series of guitars and basses for discerning players who demand the ultimate in precision, performance and tone. The American Ultra Jazz Bass V features a unique “Modern D” neck profile for hours of playing comfort, and the tapered neck heel allows easy access to the highest register. A speedy 10”-14” compound-radius fingerboard with 21 medium-jumbo frets means effortless action, while the Ultra Noiseless™ Vintage pickups and redesigned preamp provide endless tonal possibilities – without hum. The sculpted rear body contours are as beautiful as they are functional. This versatile, state-of-the-art instrument will inspire you to push your playing to new heights.",
+        "Other features include “F”-stamped lightweight vintage-paddle tuning machines with tapered shafts, chrome hardware and bone nut. Includes premium molded hardshell case."
+      ]
+    }
   }
 ]
