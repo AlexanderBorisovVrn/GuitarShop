@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import CardList from "../CardList/CardList";
 import store from "../../store/RootStore";
@@ -11,14 +11,31 @@ type Props = {};
 
 const CardListContainer = observer(({}: Props) => {
   const { category } = useParams();
+  const [filter, setFilter] = useState<string>("default");
   const { data } = store.fetchStore;
+
   useEffect(() => {
     store.fetchStore.fetchData();
   }, []);
 
-  const filteredData = category
+  const categoryData = category
     ? data.filter((item: IProduct) => item.category === category)
     : data;
+
+  const filteredData = (data: IProduct[], filter: string) => {
+    switch (filter) {
+      case "priceUp":
+        return data.slice().sort(
+          (a: IProduct, b: IProduct) => a.model.price - b.model.price
+        );
+      case "priceDown":
+        return data.slice().sort(
+          (a: IProduct, b: IProduct) => b.model.price - a.model.price
+        );
+      default:
+        return data;
+    }
+  };
 
   if (store.fetchStore.isLoading) {
     return (
@@ -39,7 +56,7 @@ const CardListContainer = observer(({}: Props) => {
     return <Error />;
   }
 
-  if (filteredData.length === 0) {
+  if (filteredData(categoryData, filter).length === 0) {
     return (
       <div
         style={{
@@ -54,7 +71,11 @@ const CardListContainer = observer(({}: Props) => {
       </div>
     );
   }
-  return <CardList data={filteredData} />;
+  return (
+    <CardList setFilter={setFilter}>
+      {filteredData(categoryData, filter)}
+    </CardList>
+  );
 });
 
 export default CardListContainer;
