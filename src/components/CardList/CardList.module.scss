@@ -1,0 +1,46 @@
+@import '../../variables/colors.scss';
+@import '../../variables/breakpoints.scss';
+
+.Wrap{
+  // background-color: rgba(0, 0, 255, 0.315);
+  min-height: 100vh;
+  padding: .25rem;
+  @include lg{padding: .5rem;}
+
+
+}
+.Cards_List{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  @include md{grid-template-columns: repeat(3,1fr);}
+  // grid-auto-flow: row;
+
+}
+
+.Sort{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+}
+.Sort>select{
+  border: none;
+  border-bottom: 1px solid $gray_1;
+  padding: .25rem;
+  outline: none;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04); 
+  border-radius: .1em;
+  
+  color:$gray_1 ;
+  font-weight: 600;
+  font-family:sans-serif;
+  &::after{
+    content: 'fds';
+  }
+}
+.Sort>h3{
+  margin-right: .5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}

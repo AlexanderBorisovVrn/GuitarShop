@@ -1,0 +1,47 @@
+@import "src/variables/colors.scss";
+@import "src/variables/size.scss";
+
+.Wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+._Field {
+  width: 100%;
+  margin: 1rem 0;
+}
+.Field_Inner,
+.Err_Message {
+  &::placeholder {
+    text-transform: capitalize;
+  }
+}
+
+.Field_Inner {
+  width: 100%;
+  padding: $_S;
+}
+
+.Err_Message {
+  color: $error_1;
+  padding: $_S 0;
+}
+.Head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $_L;
+}
+.Head > i {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  width: 1.5rem;
+  font-size: 20px;
+}

@@ -1,0 +1,35 @@
+@import 'src/variables/colors.scss';
+
+.Wrap{}
+
+.Display_Img{
+  height: 300px;
+}
+
+.Current_Img{
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  padding: .25rem;
+  margin-right: .5rem;
+  cursor: pointer;
+  border: 1px solid $gray_2;
+
+}
+.isCurrent{
+border: 1px solid $gray_4;
+box-shadow: 2px 2px 8px black;
+}
+
+.Current_Img>img{
+ object-fit: contain;
+}
+
+
+.Current{
+  display: flex;
+  flex-wrap: wrap;
+  margin: .5rem 0;
+  justify-content: center;
+}
+

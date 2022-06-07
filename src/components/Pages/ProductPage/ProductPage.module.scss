@@ -1,0 +1,8 @@
+@import '../../../variables/breakpoints.scss';
+
+#Product_Page{
+  display: grid;
+  grid-template-columns: 1fr;
+  @include md(){grid-template-columns: 25% 1fr;}
+  @include lg(){grid-template-columns: 30% 1fr;}
+}

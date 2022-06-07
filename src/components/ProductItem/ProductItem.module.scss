@@ -1,0 +1,81 @@
+@import "src/variables/colors.scss";
+.Layout {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 65% 1fr;
+  gap: 0.5rem;
+}
+.Title,
+.SubTitle {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.SubTitle {
+  margin: 1rem 0;
+}
+
+.Aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.Field{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: .75rem;
+font-weight: 800;
+font-size: 28px;
+
+}
+.Field>span{
+  display: block;
+  margin-left: .5rem;
+}
+.Features, .Description{
+  color: $gray_5;
+}
+
+.Features {
+  margin: 1rem 0;
+  list-style: square outside;
+  list-style-position: inside;
+  font-size: 1.25rem;
+}
+.Features>li{
+  margin: .5rem 0;
+}
+.Description {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+.Description > li {
+  margin: 0.75rem 0;
+  font-family: serif;
+}
+
+.Aside>button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  background-color: $primary_1;
+  text-transform:uppercase;
+  color:white;
+  font-weight: 600;
+  font-size: 1rem;
+  &:hover{
+    background-color: $primary_2;
+  }
+}
+.Btn_Icon{
+  display: block;
+  margin-right: .75rem;
+  font-size: 30px;
+}

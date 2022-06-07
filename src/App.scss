@@ -1,0 +1,88 @@
+@import './variables/breakpoints.scss';
+@import './variables/colors.scss';
+@import './variables/size.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+
+*,*:after, *:before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+button{
+cursor: pointer;
+background-color: none;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  outline: none;
+}
+ul{
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display';
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.Container {
+  display: flex;
+  margin: 0 auto;
+  // background-color: rgba(0, 0, 223, 0.103);
+  padding: 0 10px;
+  height: 100%;
+  width: 100%;
+
+  @include md() {
+    padding: 0 15px;
+  }
+  @include lg() {
+    padding: 0 20px;
+  }
+  @include xl() {
+    padding: 0 25px;
+  }
+  @include xxl() {
+    padding: 0 30px;
+  }
+}
+.Block{
+  display: block;
+}
+
+._Hover{
+  &:hover{
+    color: $primary_1;
+
+  }
+}
+._Underline{
+  &:hover{border-bottom: 4px solid $primary_1;
+  transform:translateY(2px)}
+}

@@ -1,0 +1,18 @@
+@import "/src/variables/size.scss";
+@import "/src/variables/colors.scss";
+.Item_List {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.Top {
+  height: 3rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: $gray_1;
+}

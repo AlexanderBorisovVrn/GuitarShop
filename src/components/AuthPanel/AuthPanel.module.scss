@@ -1,0 +1,34 @@
+@import '/src/variables/colors.scss';
+$drop-height:6rem;
+$drop-width:8rem;
+.Wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.Drop {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color:initial;
+  width: 8rem;
+  height: $drop-height;
+  bottom: 0px;
+  transform: translate(-2.75rem, $drop-height);
+
+}
+.Drop>li{
+  display: flex;
+  justify-content: center;
+  width: $drop-width;
+  background-color: $primary_1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  align-items: center;
+  height: $drop-height/2;
+  color:white
+}
+

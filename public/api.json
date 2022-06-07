@@ -1,0 +1,216 @@
+[
+  {
+    "category": "electric-guitars",
+    "model": {
+      "id": "4jldkfj23",
+      "type": "stratocaster",
+      "name": "American Professional II Stratocaster",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113900755_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113900755_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113900755_fen_ins_bck_1_rl.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113900755_fen_ins_cbr_1_nr.jpg"
+      ],
+      "serial": "0113900755",
+      "color": "3-Color Sunburst",
+      "handside": "right",
+      "price": "2200",
+      "features": [
+        "Three V-Mod II single-coil Stratocaster pickups",
+        "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+        "Deep 'C'-shaped neck profile with rolled fingerboard edges"
+      ],
+      "description": [
+        "The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep “C” neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle.",
+        "The American Pro II Stratocaster delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "electric-guitars",
+    "model": {
+      "id": "8dhsewep",
+      "name": "AMERICAN PROFESSIONAL II STRATOCASTER HSS",
+      "serial": "0113912718",
+      "type": "stratocaster",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113912718_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113912718_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113912718_fen_ins_bck_1_rl.jpg"
+      ],
+      "color": "Mystic Surf Green",
+      "price": "2000",
+      "features": [
+        "Two V-Mod II single-coil Stratocaster pickups",
+        "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+        "Double Tap™ Humbucking Bridge Pickup"
+      ],
+      "description": [
+        "The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep “C” neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle.",
+        "The American Pro II Stratocaster HSS delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "electric-guitars",
+    "model": {
+      "type": "telecaster",
+      "id": "9wjerkl2",
+      "name": " American Professional II Telecaster®",
+      "serial": "0113940700",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113940700_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/ZoomJpg/10001/0113940700_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113940700_fen_ins_bck_1_rl.jpg"
+      ],
+      "color": "3-Color Sunburst",
+      "handside": "right",
+      "price": "2100",
+      "features": [
+        "Two V-Mod II single-coil Telecaster pickups",
+        "New top-load/string-through Telecaster bridge with compensated brass “bullet” saddles",
+        "Deep 'C'-shaped neck profile with rolled fingerboard edges"
+      ],
+      "description": [
+        "The American Professional II Telecaster® draws from more than seventy years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep 'C' neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Telecaster single-coil pickups are more articulate than ever while delivering the twang, snap and snarl that made the Tele famous. The new top-load/string-through bridge with compensated “bullet” saddles is our most comfortable, flexible Tele bridge yet – retaining classic brass-saddle tone and providing excellent intonation and flexible setup options, allowing you to tailor the tension and tone of each string to your liking."
+      ]
+    }
+  },
+  {
+    "category": "electric-guitars",
+    "model": {
+      "type": "stratocaster",
+      "name": "AMERICAN PROFESSIONAL II STRATOCASTER",
+      "id": "3j4l257dh",
+      "serial": "0113912718",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0113930719_fen_ins_frt_1_rl.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113930719_fen_ins_frt_1_rl.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0113930719_fen_ins_bck_1_rr.jpg"
+      ],
+      "color": "Miami Blue",
+      "handside": "left",
+      "price": "1900",
+      "features": [
+        "Two V-Mod II single-coil Stratocaster pickups",
+        "Upgraded 2-Point Tremolo with Cold-Rolled Steel Block",
+        "Double Tap™ Humbucking Bridge Pickup"
+      ],
+      "description": [
+        "The American Professional II Stratocaster® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "Our popular Deep “C” neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. New V-Mod II Stratocaster single-coil pickups are more articulate than ever while retaining bell-like chime and warmth. An upgraded 2-point tremolo with a cold-rolled steel block increases sustain, clarity and high-end sparkle.",
+        "The American Pro II Stratocaster Left-Hand delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "acoustasonic-guitars",
+    "model": {
+      "type": "telecaster",
+      "name": "ACOUSTASONIC® PLAYER TELECASTER®",
+      "serial": "0972213239",
+      "id": "235hdffso",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0972213239_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0972213239_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/ThumbnailJpg/10001/0972213239_fen_ins_bck_1_rl.jpg"
+      ],
+      "color": "Brushed Black",
+      "handside": "right",
+      "price": "2200",
+      "features": [
+        "Two pickup systems: Fender Acoustasonic Noiseless; Fishman Under-Saddle Transducer",
+        "Acoustic Engine delivers a new and unique set of acoustic and electric voices",
+        "Blend Knob selects and blends voices"
+      ],
+      "description": [
+        "The evolution of Fender’s trailblazing Acoustasonic platform continues with the introduction of the Acoustasonic Player Telecaster. This acoustic-electric guitar offers its own set of six voices that showcases its unique personality. A streamlined 3-way switch allows for shape-shifting between acoustic and electric tones. With the Acoustasonic Player Telecaster, this platform has been refined to offer a versatile, more accessible tool for the modern musician."
+      ]
+    }
+  },
+  {
+    "category": "acoustasonic-guitars",
+    "model": {
+      "type": "stratocaster",
+      "name": "The American Acoustasonic™ Stratocaster®",
+      "id": "42yd9fsd8uwe",
+      "serial": "0972023200",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0972023200_gtr_frt_001_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0972023200_gtr_frt_001_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0972023200_gtr_back_001_rl.jpg"
+      ],
+      "color": "3-Color Sunburst",
+      "handside": "right",
+      "price": "1700",
+      "features": [
+        "Cutting-edge acoustic-electric guitar",
+        "Acoustic Engine delivers new body style and tone wood combinations",
+        "Blend Knob selects and blends voices",
+        "Patented Stringed Instrument Resonance System (SIRS)"
+      ],
+      "description": [
+        "The American Acoustasonic™ Stratocaster® continues to embody the spirit of purposeful innovation that drives Fender guitars. The power of the Fender and Fishman®-designed Acoustic Engine is sure to deliver true inspiration. From acoustic shapeshifting to electric rhythm tones, this extremely versatile guitar creates a brand-new lane on the sonic highway."
+      ]
+    }
+  },
+  {
+    "category": "electric-basses",
+    "model": {
+      "type": "precision",
+      "name": "AMERICAN PROFESSIONAL II PRECISION BASS®",
+      "id": "9rej2k35233",
+      "serial": "0193930755",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0193930755_fen_ins_frt_1_rr.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193930755_fen_ins_frt_1_rr.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193930755_fen_ins_bck_1_rl.jpg"
+      ],
+      "color": "Mercury",
+      "handside": "right",
+      "price": "2700",
+      "features": [
+        "Single V-Mod II split-coil Precision Bass pickup",
+        "’63 P Bass neck profile",
+        "Bone nut; 20 narrow-tall frets for familiar playing feel",
+        "Tapered-shaft tuning machines; Posiflex graphite rods for neck reinforcement"
+      ],
+      "description": [
+        "The American Professional II Precision Bass® draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "The ’63 P Bass profile neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. The new V-Mod II Precision Bass split-coil pickup is more articulate than ever while delivering the punch and growl the P Bass® is known for.",
+        "The American Pro II Precision Bass delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  },
+  {
+    "category": "electric-basses",
+    "model": {
+      "type": "precision",
+      "name": "AMERICAN PROFESSIONAL II PRECISION BASS® LEFT-HAND",
+      "id": "23jltw5j2",
+      "serial": "0193942706",
+      "img": "https://www.fmicassets.com/Damroot/GuitarVertDesktopJpg/10001/0193942706_fen_ins_frt_1_rl.jpg",
+      "photo": [
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193942706_fen_ins_frt_1_rl.jpg",
+        "https://www.fmicassets.com/Damroot/LgJpg/10001/0193942706_fen_ins_bck_1_rr.jpg"
+      ],
+      "color": "Black",
+      "handside": "left",
+      "price": "2600",
+      "features": [
+        "Single V-Mod II split-coil Precision Bass pickup",
+        "’63 P Bass neck profile",
+        "HiMass™ Vintage bridge for increased sustain",
+        "Tapered-shaft tuning machines; Posiflex graphite rods for neck reinforcement"
+      ],
+      "description": [
+        "The American Professional II Precision Bass® Left-Hand draws from more than sixty years of innovation, inspiration and evolution to meet the demands of today’s working player.",
+        "The ’63 P Bass profile neck now sports smooth rolled fingerboard edges, a “Super-Natural” satin finish and a newly sculpted neck heel for a supremely comfortable feel and easy access to the upper register. The new V-Mod II Precision Bass split-coil pickup is more articulate than ever while delivering the punch and growl the P Bass® is known for.",
+        "The American Pro II Precision Bass delivers instant familiarity and sonic versatility you’ll feel and hear right away, with broad ranging improvements that add up to nothing less than a new standard for professional instruments."
+      ]
+    }
+  }
+]
