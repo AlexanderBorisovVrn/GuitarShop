@@ -1,11 +1,13 @@
 import styles from "./Header.module.scss";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { ILink } from "../../types/types";
 import logo from "../../img/logo/logo.svg";
-import NavTabs from "../NavTabs/NavTabs";
+import NavTab from "../NavTab/NavTab";
 import AuthPanel from "../AuthPanel/AuthPanel";
 import store from "../../store/RootStore";
 
 import { observer } from "mobx-react-lite";
+import Nav from "../Nav/Nav";
 
 const {
   _Header,
@@ -21,13 +23,21 @@ const {
 
 const finalStyles = {
   containerStyles: ["Container", Header_Container_SpaceBetween].join(" "),
-
   searchButtonStyles: [Button, Button_Border, "_Underline", "_Hover"].join(" "),
   cartButtonStyles: [Button, "_Hover"].join(" "),
   burgerButtonStyle: [Button, Burger].join(" "),
 };
 
+const navLinks: ILink[] = [
+  { label: "electric", to: "electric-guitars/" },
+  { label: "acoustasonic", to: "acoustasonic-guitars/" },
+  { label: "acoustic", to: "acoustic-guitars/" },
+  { label: "basses", to: "electric-basses/" },
+];
 
+const desktopNav = navLinks.map((link) => (
+  <NavTab hover underline height styles={{marginRight:'1rem'}}>{link}</NavTab>
+));
 
 function Header() {
   const {
@@ -39,7 +49,7 @@ function Header() {
 
   const { signout, user } = store.authStore;
 
-  const itemsInCart = store.cartStore.itemsInCart() ||0 ;
+  const itemsInCart = store.cartStore.itemsInCart() || 0;
   return (
     <header className={_Header}>
       <div className={containerStyles}>
@@ -51,14 +61,12 @@ function Header() {
             </Link>
           </div>
         </div>
-
-        <NavTabs />
+        <Nav>
+          {desktopNav}
+        </Nav>
         <ul className={Group}>
           <li>
-            <button
-              type="button"
-              className={cartButtonStyles}
-            >
+            <button type="button" className={cartButtonStyles}>
               <AuthPanel prop={{ user, signout }} />
             </button>
           </li>

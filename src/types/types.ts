@@ -15,3 +15,8 @@ export interface IProduct{
   category:string,
   model:Model
 }
+
+export interface ILink {
+  label: string;
+  to: string;
+}

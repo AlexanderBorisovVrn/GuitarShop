@@ -1,9 +1,12 @@
 @import "../../variables/breakpoints.scss";
 @import "../../variables/colors.scss";
+$header-height:3rem;
+$nav-height:10rem;
 
 ._Header {
   display: flex;
-  height: 3rem;
+  position: relative;
+  height: $header-height;
   border-top: 1px solid $gray_2;
   border-bottom: 1px solid $gray_2;
   @include lg {
@@ -101,3 +104,4 @@
 .Header_Container_SpaceBetween {
   justify-content: space-between;
 }
+
