@@ -1,10 +1,11 @@
-import React from "react";
 import style from "./ProductItem.module.scss";
 import { IProduct } from "../../types/types";
 import ImgGallery from "../ImgGallery/ImgGallery";
 const {
   Layout,
+  Gallery,
   Features,
+  Features_List,
   Description,
   Field,
   Title,
@@ -13,14 +14,19 @@ const {
   Btn_Icon,
 } = style;
 
-type Props = { item: IProduct | undefined };
+type Props = {
+  children: IProduct | undefined;
+  addToCart: (id: number | string, q: number) => void;
+};
 
-export default function ProductItem({ item }: Props) {
-  if (!item) {
+export default function ProductItem({ children, addToCart }: Props) {
+  if (!children) {
     return null;
   }
   const { name, serial, photo, description, features, color, price } =
-    item.model;
+    children.model;
+
+  const onClickHandler = () => addToCart(children.model.id, 1);
 
   const displayContent = (content: string[]) => {
     return content.map((p, idx) => {
@@ -29,19 +35,14 @@ export default function ProductItem({ item }: Props) {
   };
 
   return (
-    <>
+    <div className="Container" id={Layout}>
       <h1 className={Title}>{name}</h1>
-      <h5>Model#:{serial}</h5>
-      <div className={Layout}>
-        <section>
-          <div style={{ margin: "1rem 0" }}>
-            <ImgGallery links={photo} />
-          </div>
-          <ul className={Description}>{displayContent(description)}</ul>
-          <h2 className={SubTitle}>Features</h2>
-          <hr />
-          <ul className={Features}>{displayContent(features)}</ul>
-        </section>
+      <h4>Model#:{serial}</h4>
+      <section className={Gallery}>
+        <div style={{ margin: "1rem 0" }}>
+          <ImgGallery links={photo} />
+        </div>
+      </section>
         <aside className={Aside}>
           <div className={Field}>
             Price:
@@ -51,11 +52,22 @@ export default function ProductItem({ item }: Props) {
             Color:
             <span> {color}</span>
           </div>
-          <button type="button" style={{boxShadow:'2px 2px 6px black'}}>
+          <button
+            type="button"
+            onClick={onClickHandler}
+            style={{ boxShadow: "2px 2px 6px black" }}
+          >
             <span className={Btn_Icon}>&#10010;</span> Add to Cart
           </button>
         </aside>
-      </div>
-    </>
+        <section className={Description}>
+          <ul>{displayContent(description)}</ul>
+        </section>
+        <section className={Features}>
+          <h2 className={SubTitle}>Features</h2>
+          <hr />
+          <ul className={Features_List}>{displayContent(features)}</ul>
+        </section>
+    </div>
   );
 }

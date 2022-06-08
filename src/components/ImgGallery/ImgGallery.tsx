@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import style from "./ImgGallery.module.scss";
-import { useJoinClassNames } from "../../hooks/useJoinClassNames";
-const { Current_Img, Wrap, Display_Img, Current, isCurrent } = style;
+const { Current_Img, Display_Img, Current, isCurrent } = style;
 
 type Props = {
   links: string[];
@@ -24,7 +23,7 @@ export default function ImgGallery({ links }: Props) {
     );
   });
   return (
-    <div className={Wrap}>
+    <div >
       <div className={Display_Img}>
         <img src={currentImg} alt={currentImg} />
       </div>

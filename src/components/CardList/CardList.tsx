@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import style from "./CardList.module.scss";
 import Pagination from "@mui/material/Pagination";
 import { IProduct } from "../../types/types";
@@ -12,19 +12,26 @@ type Props = {
 };
 
 const CardList = ({ children, setFilter }: Props) => {
-  const [currentPage,setCurrentPage]=useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filterHandler = (e: React.ChangeEvent<HTMLSelectElement>) =>
     setFilter(e.target.value);
-  const paginationHandler = (event: React.ChangeEvent<unknown>, page: number) =>{setCurrentPage(page)}
-  const itemsInPage:number = 6;
-  const pagesCount = Math.ceil(children.length/itemsInPage);
-  const start = (currentPage-1)*itemsInPage;
-  const end = currentPage*itemsInPage;
+  const paginationHandler = (
+    event: React.ChangeEvent<unknown>,
+    page: number
+  ) => {
+    setCurrentPage(page);
+  };
+  const itemsInPage: number = 6;
+  const pagesCount = Math.ceil(children.length / itemsInPage);
+  const start = (currentPage - 1) * itemsInPage;
+  const end = currentPage * itemsInPage;
 
-  const dataView = children.map((item, idx) => {
-    return <CardItem item={item} key={idx} />;
-  }).slice(start,end);
+  const dataView = children
+    .map((item, idx) => {
+      return <CardItem item={item} key={idx} />;
+    })
+    .slice(start, end);
 
   return (
     <section className={Wrap}>
@@ -46,7 +53,12 @@ const CardList = ({ children, setFilter }: Props) => {
       </div>
       <ul className={Cards_List}>{dataView}</ul>
       <div className={_Pagination}>
-        <Pagination count={pagesCount} color="primary" page={currentPage} onChange={paginationHandler} />
+        <Pagination
+          count={pagesCount}
+          color="primary"
+          page={currentPage}
+          onChange={paginationHandler}
+        />
       </div>
     </section>
   );

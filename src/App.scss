@@ -1,10 +1,11 @@
-@import './variables/breakpoints.scss';
-@import './variables/colors.scss';
-@import './variables/size.scss';
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import "./variables/breakpoints.scss";
+@import "./variables/colors.scss";
+@import "./variables/size.scss";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
 
-
-*,*:after, *:before{
+*,
+*:after,
+*:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,9 +27,9 @@ img {
   height: 100%;
   width: 100%;
 }
-button{
-cursor: pointer;
-background-color: none;
+button {
+  cursor: pointer;
+  background-color: none;
 }
 
 a {
@@ -40,21 +41,91 @@ a {
   text-decoration: none;
   outline: none;
 }
-ul{
+ul {
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display";
   font-weight: normal;
   letter-spacing: 1px;
   text-transform: uppercase;
+}
+h1 {
+  font-size: 1.1rem;
+  @include sm {
+    font-size: 1.3rem;
+  }
+  @include md {
+    font-size: 1.4rem;
+  }
+  @include lg {
+    font-size: 1.5rem;
+  }
+  @include xl {
+    font-size: 1.6rem;
+  }
+  @include xxl {
+    font-size: 1.7rem;
+  }
+}
+h2 {
+  font-size: 0.9rem;
+  @include sm {
+    font-size: 1.1rem;
+  }
+  @include md {
+    font-size: 1.2rem;
+  }
+  @include lg {
+    font-size: 1.3rem;
+  }
+  @include xl {
+    font-size: 1.4rem;
+  }
+  @include xxl {
+    font-size: 1.5rem;
+  }
+}
+h3 {
+  font-size: 0.8rem;
+  @include sm {
+    font-size: 0.9rem;
+  }
+  @include md {
+    font-size: 1rem;
+  }
+  @include lg {
+    font-size: 1.1rem;
+  }
+  @include xl {
+    font-size: 1.2rem;
+  }
+  @include xxl {
+    font-size: 1.3rem;
+  }
+}
+h4 {
+  font-size: 0.6rem;
+  @include sm {
+    font-size: 0.7rem;
+  }
+  @include md {
+    font-size: 0.8rem;
+  }
+  @include lg {
+    font-size: 0.9rem;
+  }
 }
 
 .Container {
   display: flex;
   margin: 0 auto;
-  // background-color: rgba(0, 0, 223, 0.103);
   padding: 0 10px;
   height: 100%;
   width: 100%;
@@ -72,17 +143,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 30px;
   }
 }
-.Block{
+.Block {
   display: block;
 }
 
-._Hover{
-  &:hover{
+._Hover {
+  &:hover {
     color: $primary_1;
-
   }
 }
-._Underline{
-  &:hover{border-bottom: 4px solid $primary_1;
-  transform:translateY(2px)}
+._Underline {
+  &:hover {
+    border-bottom: 4px solid $primary_1;
+    transform: translateY(2px);
+  }
 }
