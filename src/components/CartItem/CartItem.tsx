@@ -1,5 +1,5 @@
 import { IItem } from "../../store/CartStore";
-import Counter from "../Counter/Counter";
+import CartCounter from "../../CartCounter/CartCounter";
 import style from "./CartItem.module.scss";
 const { Wrap, Item, Img, Price, Count, Name, Check } = style;
 type Props = {
@@ -35,7 +35,7 @@ export default function CartItem({ item, deleteItemGroupFromCart }: Props) {
         </li>
         <li className={Count}>
           <div>
-            <Counter id={item!.id} />
+            <CartCounter id={item!.id} />
           </div>
           <span  onClick={() => deleteItemGroupFromCart(item!.id)}>Удалить</span>
         </li>

@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import style from "./CardItem.module.scss";
 import { IProduct } from "../../types/types";
+import CartCounter from "../../CartCounter/CartCounter";
 import Counter from "../Counter/Counter";
 type Props = {
   item: IProduct;
 };
 
-const { Img, Title, Item, Options, Price,Count } = style;
+const { Img, Title, Item, Options, Price, Count } = style;
 
 export default function CardItem({ item }: Props) {
   const { category, model } = item;
@@ -16,15 +17,15 @@ export default function CardItem({ item }: Props) {
   const transformName = name.toLowerCase();
   return (
     <li className={Item}>
-      <Link to={link} style={{flexDirection:'column'}}>
+      <Link to={link} style={{ flexDirection: "column" }}>
         <div className={Img}>
           <img alt={name} src={img} />
         </div>
         <h4 className={Title}>{transformName}</h4>
         <ul className={Options}>
-          <li className={Count} onClick={(e)=>e.preventDefault()}>
+          <li className={Count} onClick={(e) => e.preventDefault()}>
             Add to cart:&nbsp;
-            <Counter id={item.model.id}/>
+            <CartCounter id={item.model.id}/>
           </li>
           <li className={Price}>
             <span>Price</span>: ${price}
