@@ -9,6 +9,7 @@ type Props = { id: string | number };
 function Counter({ id }: Props) {
   const item = store.cartStore.cart.find((item: any) => item.id === id);
   const counter = item ? item.count : 0;
+  
   useEffect(() => {
   }, [counter]);
 

@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
 import CSS from 'csstype'
 
 type Props = {
@@ -17,6 +17,5 @@ export default function Nav({ children, direction = "row", space }: Props) {
   if (space) {
     style.justifyContent = "space-between";
   }
-  console.log(style);
   return <ul style={style}>{children}</ul>;
 }

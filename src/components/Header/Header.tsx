@@ -35,8 +35,8 @@ const navLinks: ILink[] = [
   { label: "basses", to: "electric-basses/" },
 ];
 
-const desktopNav = navLinks.map((link) => (
-  <NavTab hover underline height styles={{marginRight:'1rem'}}>{link}</NavTab>
+const desktopNav = navLinks.map((link,i) => (
+  <NavTab key={i} hover underline height styles={{marginRight:'1rem'}}>{link}</NavTab>
 ));
 
 function Header() {
